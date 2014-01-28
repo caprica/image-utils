@@ -46,13 +46,10 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <!-- 
                 <filtering>true</filtering>
                 <excludes>
                     <exclude>.gitignore</exclude>
                 </excludes>
-                -->
-                <filtering>false</filtering> <!-- CAREFUL SINCE THE FONT WOULD BE FILTERED! -->
             </resource>
         </resources>
     </build>
