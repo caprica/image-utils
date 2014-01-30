@@ -49,22 +49,22 @@ public class ImageFactory {
         return resizeOp.filter(sourceImage, null);
     }
 
-	/**
-	 * Scale an image the specified width and height.
-	 * <p>
-	 * The aspect ratio of the image will be preserved.
-	 *
-	 * @param sourceImage
-	 * @param targetWidth
-	 * @param targetHeight
-	 * @return
-	 */
+    /**
+     * Scale an image the specified width and height.
+     * <p>
+     * The aspect ratio of the image will be preserved.
+     *
+     * @param sourceImage
+     * @param targetWidth
+     * @param targetHeight
+     * @return
+     */
     public static BufferedImage scaleImage(BufferedImage sourceImage, Integer targetWidth, Integer targetHeight) {
-        float sx = targetWidth / (float) sourceImage.getWidth();
-        float sy = targetHeight / (float) sourceImage.getHeight();
+        float sx = targetWidth / (float)sourceImage.getWidth();
+        float sy = targetHeight / (float)sourceImage.getHeight();
         float sf = Math.min(sx, sy);
-        targetWidth = (int) Math.ceil(sf * sourceImage.getWidth());
-        targetHeight = (int) Math.ceil(sf * sourceImage.getHeight());
+        targetWidth = (int)Math.ceil(sf * sourceImage.getWidth());
+        targetHeight = (int)Math.ceil(sf * sourceImage.getHeight());
         ResampleOp resizeOp = new ResampleOp(targetWidth, targetHeight);
         return resizeOp.filter(sourceImage, null);
     }
