@@ -44,10 +44,10 @@ public class ImageFactory {
      * @param targetHeight
      * @return
      */
-	public static BufferedImage fitImage(BufferedImage sourceImage, Integer targetWidth, Integer targetHeight) {
+    public static BufferedImage fitImage(BufferedImage sourceImage, Integer targetWidth, Integer targetHeight) {
         ResampleOp resizeOp = new ResampleOp(targetWidth, targetHeight);
         return resizeOp.filter(sourceImage, null);
-	}
+    }
 
 	/**
 	 * Scale an image the specified width and height.
